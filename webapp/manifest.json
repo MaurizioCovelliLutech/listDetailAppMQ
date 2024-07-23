@@ -75,6 +75,13 @@
         "settings": {
           "local": true
         }
+      },
+      "modCarrier":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "localService/UX_C_Carrier_TP.json",
+        "settings": {
+          "local": true
+      }
       }
     },
     "resources": {

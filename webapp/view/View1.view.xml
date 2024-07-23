@@ -5,13 +5,11 @@
         <Page
             title="{i18n>titleList}">
             <List
-                items="{
-                    path: '/UX_C_Carrier_TP'
-                }"
+                items="{modCarrier>/}"
                 itemPress="onListItemPress">
                 <ObjectListItem
-                    title="{Carrname}"
-                    number="{Carrid}"
+                    title="{modCarrier>Carrname}"
+                    number="{modCarrier>Carrid}"
                     type="Active"/>
             </List>
         </Page>
