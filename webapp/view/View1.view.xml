@@ -8,9 +8,12 @@
                 items="{modCarrier>/}"
                 itemPress="onListItemPress">
                 <ObjectListItem
-                    title="{modCarrier>Carrname}"
-                    number="{modCarrier>Carrid}"
-                    type="Active"/>
+                    title="{modCarrier>Carrid}"
+                    number=""
+                    type="Active">
+                    <ObjectAttribute text="{modCarrier>Carrname}" />
+                </ObjectListItem>
+                   
             </List>
         </Page>
     </App>
