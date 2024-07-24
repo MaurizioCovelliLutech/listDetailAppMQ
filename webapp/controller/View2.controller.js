@@ -7,10 +7,10 @@ sap.ui.define([
     return Controller.extend("project1.controller.View2", {
         onInit: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.getRoute("view2").attachPatternMatched(this._onObjectMatched, this);
+            oRouter.getRoute("RouteView2").attachPatternMatched(this._onRouteMatched, this);
         },
 
-        _onObjectMatched: function (oEvent) {
+        onRouteMatched: function (oEvent) {
             var sCarrid = oEvent.getParameter("arguments").carrid;
             var oView = this.getView();
             var oModel = oView.getModel();

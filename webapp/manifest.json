@@ -82,7 +82,22 @@
         "settings": {
           "local": true
       }
+      },
+      "modConnection":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "localService/UX_C_Connection_TP.json",
+        "settings": {
+          "local": true
       }
+      },
+      "modFlight":{
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "localService/UX_C_Flight_TP.json",
+        "settings": {
+          "local": true
+      }
+      }
+      
     },
     "resources": {
       "css": [
@@ -103,24 +118,30 @@
       },
       "routes": [
         {
-          "name": "view1",
-          "pattern": "",
-          "target": "view1"
+          "name": "RouteView1",
+          "pattern": ":?query:",
+          "target": ["TargetView1"]
         },
         {
-          "name": "view2",
-          "pattern": "view2/{carrid}",
-          "target": "view2"
+          "name": "RouteView2",
+          "pattern": "",
+          "target":["TargetView2"]
         }
       ],
       "targets": {
-        "view1": {
-          "viewName": "View1",
-          "viewLevel": 1
+        "TargetView1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View1",
+          "viewName": "View1"
         },
-        "view2": {
-          "viewName": "View2",
-          "viewLevel": 2
+        "TargetView2": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View2",
+          "viewName": "View2"
         }
       }
     },
